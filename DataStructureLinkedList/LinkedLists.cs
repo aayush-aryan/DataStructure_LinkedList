@@ -121,8 +121,30 @@ namespace DataStructureLinkedList
             Console.WriteLine("Removed from linkedlist :" + temp.data);
         }
         /// <summary>
-        /// 
+        /// method for deleting lastNodeElements
         /// </summary>
+        public void DeleteNodeAtLast()
+        {
+
+            if (Head == null & Tail == null)
+            {
+                Console.WriteLine("Nothing to delete list is empty");
+
+            }
+
+            Node temp = Head;
+            //Check until the temp next nodes's next loction is null
+            while (temp.next.next != null)
+            {
+
+                temp = temp.next;
+            }
+            //After getting this node change its location to null
+            temp.next = null;
+        }
+        /// <summary>
+        /// method for display linkedList
+        /// </summary>  
         internal void Display()
         {
             Node temp = Head;
