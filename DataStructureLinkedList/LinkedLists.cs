@@ -14,6 +14,27 @@ namespace DataStructureLinkedList
             Head = null;
             Tail = null;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public void AddNode(int value)
+        {
+            Node node = new Node(value);
+            //Checking wheather the list is empty then creates node as head
+            if (Head == null & Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                ////If node than add new node as head 
+                node.next = Head;
+                Head = node;
+            }
+            Console.WriteLine($" Added {value} at start of the linkedlist");
+        }
 
         internal void Display()
         {
