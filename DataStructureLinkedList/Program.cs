@@ -54,11 +54,6 @@ namespace DataStructureLinkedList
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
             //UC-7
-            //Ability to search LinkedList to find Node with value 30
-            //- Write MSTest Test Case as demonstrated in class
-            //-Loop through LinkedList to find node with key 30
-            */
-            //UC-7
             Node node1 = new Node(56);
             Node node2 = new Node(30);
             Node node3 = new Node(70);
@@ -72,6 +67,16 @@ namespace DataStructureLinkedList
                 Console.WriteLine("\nNode with value 30 is available in Linked list");
             }
             Console.WriteLine("\n-------------------------------");
+           // Uc-8
+            //Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
+            */
+            //UC-8
+            Console.WriteLine("Add Node After Node value 30 ");
+            linkedLists.AppendNode(56);
+            linkedLists.AppendNode(30);
+            linkedLists.AppendNode(70);
+            linkedLists.InsertNode(40, 30);
+            linkedLists.Display();
 
         }
     }
