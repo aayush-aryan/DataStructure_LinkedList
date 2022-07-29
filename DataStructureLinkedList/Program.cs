@@ -25,41 +25,41 @@ namespace DataStructureLinkedList
             linkedLists.AddNode(56);
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
-            ///UC-3
-            //Ability to create Linked List by appending 30 and 70 to 56
-            //- Node with data 56 is First Created
-            //- Next Append 30 to 56
-            //- Finally Append 70 to 30
-            //- LinkedList Sequence: 56->30->70
-
-            //Result
-            //Added 56 at start of the linkedlist
-            //Added 30 at start of the linkedlist
-            //Added 70 at start of the linkedlist
-            //Linked List:
-            //56-> 30-> 70
-
+            
             //UC-3
             linkedLists.AppendNode(56);
             linkedLists.AppendNode(30);
             linkedLists.AppendNode(70);
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
-            //UC-4
-            ///UC-4
-            //Ability to insert 30 between 56 and 70
-            //- Final Sequence: 56->30->70
-
-            //Result
-            //Added 56 at start of the linkedlist
-           //Added 70 at start of the linkedlist
-           //Linked List: 56-> 30-> 70
-
-             */
+            
             //UC-4
             linkedLists.AppendNode(56);
             linkedLists.AppendNode(70);
             linkedLists.InsertNode(30, 56);
+            linkedLists.Display();
+            Console.WriteLine("\n-------------------------------");
+
+            //UC-5
+            //Ability to delete the first element in the LinkedList of sequence 56->30->70 - Write pop method.
+            //- Note there is new head
+            //- Final Sequence: 30->70
+
+            //Result
+            //Added 56 at start of the linkedlist
+            //Added 30 at start of the linkedlist
+            //Added 70 at start of the linkedlist
+            //Delete First element
+            //Removed from linkedlist :56
+            //Linked List:
+            //30-> 70
+            */
+            //UC-5
+            linkedLists.AppendNode(56);
+            linkedLists.AppendNode(30);
+            linkedLists.AppendNode(70);
+            Console.WriteLine("Delete First element");
+            linkedLists.DeleteNodeAtFirst();
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
 
