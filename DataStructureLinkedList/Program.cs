@@ -18,7 +18,7 @@ namespace DataStructureLinkedList
             linkedLists.Head = node1;
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
-            
+
             //Uc2
             linkedLists.AddNode(70);
             linkedLists.AddNode(30);
@@ -39,11 +39,27 @@ namespace DataStructureLinkedList
             //Linked List:
             //56-> 30-> 70
 
-            */
             //UC-3
             linkedLists.AppendNode(56);
             linkedLists.AppendNode(30);
             linkedLists.AppendNode(70);
+            linkedLists.Display();
+            Console.WriteLine("\n-------------------------------");
+            //UC-4
+            ///UC-4
+            //Ability to insert 30 between 56 and 70
+            //- Final Sequence: 56->30->70
+
+            //Result
+            //Added 56 at start of the linkedlist
+           //Added 70 at start of the linkedlist
+           //Linked List: 56-> 30-> 70
+
+             */
+            //UC-4
+            linkedLists.AppendNode(56);
+            linkedLists.AppendNode(70);
+            linkedLists.InsertNode(30, 56);
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
 

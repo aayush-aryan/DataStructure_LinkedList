@@ -60,7 +60,54 @@ namespace DataStructureLinkedList
             }
             Console.WriteLine($"Added {value} at start of the linkedlist");
         }
-
+        /// <summary>
+        /// added serach method to check node data
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public bool Search(int value)
+        {
+            //Temp variable is head now
+            Node temp = Head;
+            //Check until temp location will null
+            while (temp != null)
+            {
+                //If temp node data is equal to value to be searched
+                if (temp.data == value)
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
+        /// <summary>
+        /// metod for inserting data b/w nodes
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="Previousvalue"></param>
+        public void InsertNode(int value, int Previousvalue)
+        {
+            Node newNode = new Node(value);
+            if (Head == null & Tail == null)
+            {
+                Head = newNode;
+            }
+            else
+            {
+                Node temp = Head;
+                //Checking until temp variable data equal to the previous value of value to be added
+                while (temp.data != Previousvalue)
+                {
+                    temp = temp.next;
+                }
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         internal void Display()
         {
             Node temp = Head;
