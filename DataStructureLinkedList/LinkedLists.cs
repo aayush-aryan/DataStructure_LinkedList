@@ -190,6 +190,26 @@ namespace DataStructureLinkedList
             prev.next = temp.next;
         }
         /// <summary>
+        /// method for sorting linkedListInAscendingOrder;
+        /// </summary>
+        public void sort()
+        {
+            Node index, j;
+            int temp;
+            for (index = this.Head; index.next != null; index = index.next)
+            {
+                for (j = index.next; j != null; j = j.next)
+                {
+                    if (index.data > j.data)
+                    {
+                        temp = index.data;
+                        index.data = j.data;
+                        j.data = temp;
+                    }
+                }
+            }
+        }
+        /// <summary>
         /// method for display linkedList
         /// </summary>  
         internal void Display()

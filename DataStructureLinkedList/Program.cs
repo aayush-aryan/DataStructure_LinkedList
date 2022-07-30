@@ -77,7 +77,6 @@ namespace DataStructureLinkedList
             linkedLists.Display();
             //UC_9
             //Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
-            */
             //UC-9
             Console.WriteLine("Add Node After Node value 30 ");
             linkedLists.AppendNode(56);
@@ -90,6 +89,18 @@ namespace DataStructureLinkedList
             Console.WriteLine("\nAfter deleting:");
             linkedLists.Display();
             Console.WriteLine("\nSize of LinkedList is " + linkedLists.getCount());
+            Console.WriteLine("\n-------------------------------");
+            //UC-10
+            //Ability to create Ordered Linked List in ascending order of data entered in following sequence 56, 30, 40,and 70
+            */
+            //UC10
+            linkedLists.AppendNode(56);
+            linkedLists.AppendNode(30);
+            linkedLists.AppendNode(40);
+            linkedLists.AppendNode(70);
+            linkedLists.sort();
+            Console.Write("sorted ");
+            linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
         }
     }
